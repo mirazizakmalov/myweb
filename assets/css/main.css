@@ -770,6 +770,7 @@ section,
   color: color-mix(in srgb, var(--heading-color), transparent 25%);
   /* font-style: italic; */
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .skills-icons {

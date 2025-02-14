@@ -6,18 +6,22 @@
 * License: https://bootstrapmade.com/license/
 */
 
+//Activates strict mode to prevent sloppy mistakes and func prevents var's leaking into global scope
 (function() {
   "use strict";
 
   /**
-   * Header toggle
+   * Finds the hamburger menu button (.header-toggle)
    */
   const headerToggleBtn = document.querySelector('.header-toggle');
 
+  //When the user clicks the menu button, it toggles the header-show class on <header> which
+  // shows/hides the sidebar navigation menu
+
   function headerToggle() {
     document.querySelector('#header').classList.toggle('header-show');
-    headerToggleBtn.classList.toggle('bi-list');
-    headerToggleBtn.classList.toggle('bi-x');
+    headerToggleBtn.classList.toggle('bi-list'); //Hamburg icon
+    headerToggleBtn.classList.toggle('bi-x'); // X
   }
   headerToggleBtn.addEventListener('click', headerToggle);
 
@@ -56,10 +60,11 @@
   }
 
   /**
-   * Scroll top button
+   * Finds the scroll-to-top button
    */
   let scrollTop = document.querySelector('.scroll-top');
 
+  //Use an addeventlistener to iisten to the scrolling and if we pass a certain point, show the scroll to top button and remove if vice versa
   function toggleScrollTop() {
     if (scrollTop) {
       window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
